@@ -1,0 +1,42 @@
+.window {
+    background-color: rgb(221, 221, 221);
+
+    width: 640px;
+    height: 480px;
+
+    position: relative;
+    top: calc(50% - 240px);
+    left: calc(50% - 320px);
+
+    border: 2px outset white;
+    border-radius: 3px;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    border-bottom: 2px solid #bbb;
+    background-color: #eee;
+    padding: 5px 0;
+}
+
+.text {
+    font-size: 24px;
+    color: #333;
+    margin-left: 5px;
+}
+
+.close {
+    background-color: #a53380;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    text-align: center;
+    color: white;
+    margin-right: 5px;
+    /* ugly hack */
+    line-height: 18px;
+}
