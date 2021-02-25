@@ -4,15 +4,14 @@
 .desktop {
   width: 100vw;
   height: 100vh;
-
   background-color: color-brand-primary;
 }
 
 .temp {
+  /* no idea why is it like that */
+  height: 423px;
+  margin: 0;
   padding: 10px 5px;
   font-size: 16px;
   background-color: white;
-  margin: 0;
-  /* no idea why is it like that */
-  height: 423px;
 }

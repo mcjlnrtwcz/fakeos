@@ -1,12 +1,11 @@
 @font-face {
-  font-family: "terminal-grotesque";
-  src: url("/assets/fonts/terminal/terminal-grotesque.ttf") format("truetype");
   font-weight: normal;
+  font-family: "terminal-grotesque";
   font-style: normal;
+  src: url("/assets/fonts/terminal/terminal-grotesque.ttf") format("truetype");
 }
 
 body {
   margin: 0;
-
-  font-family: "terminal-grotesque";
+  font-family: "terminal-grotesque", sans-serif;
 }
