@@ -1,7 +1,7 @@
-import Desktop from './components/Desktop/Desktop';
+import Desktop from "./components/Desktop/Desktop";
 
-import "./styles/global.css"
+import "./styles/global.css";
 
 export default function App() {
-	return <Desktop />
+  return <Desktop />;
 }
