@@ -1,0 +1,9 @@
+{
+  "extends": ["preact", "prettier"],
+  "rules": {
+    "sort-imports": [
+      "error",
+      { "ignoreCase": true, "allowSeparatedGroups": true }
+    ]
+  }
+}

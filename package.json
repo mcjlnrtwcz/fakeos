@@ -8,19 +8,12 @@
     "serve": "sirv build --port 8080 --cors --single",
     "dev": "preact watch",
     "lint": "eslint src",
+    "lint-fix": "eslint --fix src",
     "stylelint": "npx stylelint '**/*.css'",
     "stylelint-fix": "npx stylelint --fix '**/*.css'",
-    "format": "prettier --write ."
+    "format": "prettier --check .",
+    "format-fix": "prettier --write ."
   },
-  "eslintConfig": {
-    "extends": [
-      "preact",
-      "prettier"
-    ]
-  },
-  "eslintIgnore": [
-    "build/*"
-  ],
   "devDependencies": {
     "eslint": "^7.20.0",
     "eslint-config-preact": "^1.1.3",
