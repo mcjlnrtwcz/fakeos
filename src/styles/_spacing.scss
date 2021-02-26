@@ -4,6 +4,10 @@
   padding: sizes.unit($vertical) sizes.unit($horizontal);
 }
 
+@mixin margin($vertical, $horizontal) {
+  margin: sizes.unit($vertical) sizes.unit($horizontal);
+}
+
 @mixin margin-left($unit) {
   margin-left: sizes.unit($unit);
 }

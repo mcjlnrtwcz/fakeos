@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import Close from 'pixelarticons/svg/close.svg';
+import closeIcon from 'pixelarticons/svg/close.svg';
 
 import styles from './Window.module.scss';
 
@@ -24,7 +24,7 @@ function Title({ children }) {
 function Controls() {
   return (
     <div class={styles.close}>
-      <img src={Close} class={styles['close-icon']} />
+      <img src={closeIcon} class={styles['close-icon']} />
     </div>
   );
 }

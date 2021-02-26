@@ -2,6 +2,10 @@
   @return $unit * 4px;
 }
 
+@mixin width($unit) {
+  width: unit($unit);
+}
+
 @mixin square($unit) {
   height: unit($unit);
   width: unit($unit);

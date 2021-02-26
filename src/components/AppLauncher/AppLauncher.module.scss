@@ -1,0 +1,44 @@
+@use '../../styles/_colors';
+@use '../../styles/_sizes';
+@use '../../styles/_spacing';
+@use '../../styles/_typography';
+
+.launcher {
+  @include sizes.width(70);
+  background-color: colors.$block-background;
+}
+
+.header {
+  @include typography.block-title;
+  @include spacing.margin(4, 5);
+}
+
+.search {
+  @include spacing.margin(5, 3);
+  @include spacing.padding(2, 2);
+  @include sizes.border-radius-1;
+  @include typography.block-contents-small;
+  background-color: colors.$block-background-light;
+  color: colors.$block-text-light;
+  // TODO: flex mixin?
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-icon {
+  @include sizes.square(4);
+}
+
+.apps {
+  @include typography.block-contents;
+  @include spacing.margin(5, 3);
+}
+
+.app {
+  @include spacing.margin(4, 0);
+  display: flex;
+}
+
+.app-icon {
+  @include spacing.margin-right(2);
+}

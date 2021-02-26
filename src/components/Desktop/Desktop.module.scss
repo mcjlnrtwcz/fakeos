@@ -3,18 +3,18 @@
 @use '../../styles/_spacing';
 
 .desktop {
-  @include spacing.padding(6, 8);
   background-color: colors.$brand-primary;
   box-sizing: border-box;
+  display: flex;
   height: 100%;
   width: 100%;
 }
 
 .windows {
+  @include spacing.padding(6, 8);
   display: grid;
   grid-gap: sizes.unit(6);
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: repeat(2, minmax(0, 1fr));
-  height: 100%;
   width: 100%;
 }

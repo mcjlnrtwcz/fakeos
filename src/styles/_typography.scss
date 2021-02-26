@@ -20,3 +20,8 @@
   @include block;
   font-size: sizes.unit(5);
 }
+
+@mixin block-contents-small {
+  @include block;
+  font-size: sizes.unit(4);
+}

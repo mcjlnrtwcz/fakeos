@@ -5,9 +5,14 @@
   src: url('/assets/fonts/terminal/terminal-grotesque.ttf') format('truetype');
 }
 
+* {
+  // it will be set up manually anyways
+  margin: 0;
+  padding: 0;
+}
+
 body {
   height: 100vh;
-  margin: 0;
   user-select: none; /* enable this only when required */
   width: 100vw;
 }
