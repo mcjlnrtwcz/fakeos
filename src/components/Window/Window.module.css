@@ -1,10 +1,8 @@
+@value colors: "../../styles/colors.css";
+@value color-block-background, color-block-background-light from colors;
+
 .window {
-  position: relative;
-  top: calc(50% - 240px);
-  left: calc(50% - 320px);
-  width: 640px;
-  height: 480px;
-  background-color: rgb(221, 221, 221);
+  background-color: color-block-background;
   border: 2px outset white;
   border-radius: 3px;
 }
@@ -15,8 +13,13 @@
   justify-content: space-between;
   width: 100%;
   padding: 5px 0;
-  background-color: #eee;
+  background-color: color-block-background-light;
   border-bottom: 2px solid #bbb;
+}
+
+.contents {
+  padding: 5px;
+  font-size: 20px;
 }
 
 .text {

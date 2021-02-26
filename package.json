@@ -28,6 +28,7 @@
     "stylelint-config-standard": "^20.0.0"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "preact": "^10.1.0",
     "preact-render-to-string": "^5.1.2"
   }

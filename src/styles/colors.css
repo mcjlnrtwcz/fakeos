@@ -1,1 +1,5 @@
 @value color-brand-primary: #343672;
+
+/* block: window, menu, etc. */
+@value color-block-background: #dddddd;
+@value color-block-background-light: #eeeeee;
