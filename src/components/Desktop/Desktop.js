@@ -1,4 +1,4 @@
-import styles from "./Desktop.module.scss";
+import styles from './Desktop.module.scss';
 
 export default function Desktop({ children }) {
   return (

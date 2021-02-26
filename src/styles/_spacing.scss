@@ -1,0 +1,13 @@
+@use 'sizes';
+
+@mixin padding($vertical, $horizontal) {
+  padding: sizes.unit($vertical) sizes.unit($horizontal);
+}
+
+@mixin margin-left($unit) {
+  margin-left: sizes.unit($unit);
+}
+
+@mixin margin-right($unit) {
+  margin-right: sizes.unit($unit);
+}

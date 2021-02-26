@@ -1,0 +1,22 @@
+@use 'colors';
+@use 'sizes';
+
+@mixin font-terminal {
+  font-family: 'terminal-grotesque', sans-serif;
+}
+
+/* block: window, menu, etc. */
+@mixin block {
+  @include font-terminal;
+  color: colors.$block-text;
+}
+
+@mixin block-title {
+  @include block;
+  font-size: sizes.unit(6);
+}
+
+@mixin block-contents {
+  @include block;
+  font-size: sizes.unit(5);
+}

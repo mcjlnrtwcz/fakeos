@@ -1,6 +1,7 @@
-import styles from "./Window.module.scss";
+import classnames from 'classnames';
+import Close from 'pixelarticons/svg/close.svg';
 
-import classnames from "classnames";
+import styles from './Window.module.scss';
 
 export default function Window({ customClass, title, children }) {
   return (
@@ -14,7 +15,7 @@ export default function Window({ customClass, title, children }) {
 function Title({ children }) {
   return (
     <div class={styles.title}>
-      <div class={styles.text}>{children}</div>
+      <div class={styles['title-text']}>{children}</div>
       <Controls />
     </div>
   );
@@ -22,8 +23,8 @@ function Title({ children }) {
 
 function Controls() {
   return (
-    <>
-      <div class={styles.close}>x</div>
-    </>
+    <div class={styles.close}>
+      <img src={Close} class={styles['close-icon']} />
+    </div>
   );
 }

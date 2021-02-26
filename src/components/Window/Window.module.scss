@@ -1,41 +1,41 @@
-@use "../../styles/colors.scss";
+@use '../../styles/_colors';
+@use '../../styles/_typography';
+@use '../../styles/_sizes';
+@use '../../styles/_spacing';
 
 .window {
+  @include sizes.border-radius-1;
   background-color: colors.$block-background;
-  border: 2px outset white;
-  border-radius: 3px;
+  border: 2px outset colors.$block-border;
 }
 
 .title {
-  display: flex;
+  @include spacing.padding(1, 0);
   align-items: center;
+  background-color: colors.$block-background-light;
+  border-bottom: 2px solid colors.$block-background-light;
+  display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 5px 0;
-  background-color: colors.$block-background-light;
-  border-bottom: 2px solid #bbb;
+}
+
+.title-text {
+  @include typography.block-title;
+  @include spacing.margin-left(1);
 }
 
 .contents {
-  padding: 5px;
-  font-size: 20px;
-}
-
-.text {
-  margin-left: 5px;
-  color: #333;
-  font-size: 24px;
+  @include spacing.padding(1, 1);
+  @include typography.block-contents;
 }
 
 .close {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
-  color: white;
+  @include spacing.margin-right(1);
+  @include sizes.square(6);
+  @include sizes.border-radius-1;
+  background-color: colors.$block-accent;
+}
 
-  /* ugly hack */
-  line-height: 18px;
-  text-align: center;
-  background-color: #a53380;
-  border-radius: 3px;
+.close-icon {
+  filter: invert(1);
 }
