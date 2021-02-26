@@ -1,4 +1,4 @@
-import styles from "./Window.module.css";
+import styles from "./Window.module.scss";
 
 import classnames from "classnames";
 

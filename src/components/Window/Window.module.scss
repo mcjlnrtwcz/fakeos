@@ -1,8 +1,7 @@
-@value colors: "../../styles/colors.css";
-@value color-block-background, color-block-background-light from colors;
+@use "../../styles/colors.scss";
 
 .window {
-  background-color: color-block-background;
+  background-color: colors.$block-background;
   border: 2px outset white;
   border-radius: 3px;
 }
@@ -13,7 +12,7 @@
   justify-content: space-between;
   width: 100%;
   padding: 5px 0;
-  background-color: color-block-background-light;
+  background-color: colors.$block-background-light;
   border-bottom: 2px solid #bbb;
 }
 

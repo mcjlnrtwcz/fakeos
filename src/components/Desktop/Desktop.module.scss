@@ -1,12 +1,11 @@
-@value colors: "../../styles/colors.css";
-@value color-brand-primary from colors;
+@use "../../styles/colors.scss";
 
 .desktop {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
   padding: 24px 32px;
-  background-color: color-brand-primary;
+  background-color: colors.$brand-primary;
 }
 
 .windows {
