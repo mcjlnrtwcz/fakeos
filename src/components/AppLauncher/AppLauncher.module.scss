@@ -3,18 +3,15 @@
 @use '../../styles/_spacing';
 @use '../../styles/_typography';
 
-.launcher {
-  @include sizes.width(70);
-  background-color: colors.$block-background;
-}
-
 .header {
   @include typography.block-title;
-  @include spacing.margin(4, 5);
+  @include spacing.padding(2, 4);
+  @include spacing.margin-bottom(2);
+  background-color: colors.$block-background-light;
 }
 
 .search {
-  @include spacing.margin(5, 3);
+  @include spacing.margin(5, 2);
   @include spacing.padding(2, 2);
   @include sizes.border-radius-1;
   @include typography.block-contents-small;
@@ -30,15 +27,5 @@
 }
 
 .apps {
-  @include typography.block-contents;
-  @include spacing.margin(5, 3);
-}
-
-.app {
-  @include spacing.margin(4, 0);
-  display: flex;
-}
-
-.app-icon {
-  @include spacing.margin-right(2);
+  @include spacing.margin(5, 4);
 }

@@ -10,6 +10,11 @@
   width: 100%;
 }
 
+.panel {
+  @include sizes.width(70);
+  background-color: colors.$block-background;
+}
+
 .windows {
   @include spacing.padding(6, 8);
   display: grid;

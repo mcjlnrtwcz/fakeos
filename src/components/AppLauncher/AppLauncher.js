@@ -1,3 +1,4 @@
+import App from '../App/App';
 import calculatorIcon from 'pixelarticons/svg/calculator.svg';
 import helpIcon from 'pixelarticons/svg/book-open.svg';
 import searchIcon from 'pixelarticons/svg/search.svg';
@@ -7,7 +8,7 @@ import styles from './AppLauncher.module.scss';
 
 export default function AppLauncher() {
   return (
-    <div class={styles.launcher}>
+    <div>
       <div class={styles.header}>Applications</div>
       <div class={styles.search}>
         <span>Search</span>
@@ -20,17 +21,7 @@ export default function AppLauncher() {
         <App icon={terminalIcon}>Terminal</App>
         <App icon={helpIcon}>Help</App>
       </div>
-      {/* TODO: should this have other tabs than launcher? */}
       {/* TODO: place clock at the bottom? */}
-    </div>
-  );
-}
-
-function App({ icon, children }) {
-  return (
-    <div class={styles.app}>
-      <img src={icon} class={styles['app-icon']} />
-      <span>{children}</span>
     </div>
   );
 }

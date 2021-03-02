@@ -1,0 +1,20 @@
+@use '../../styles/_colors';
+@use '../../styles/_sizes';
+@use '../../styles/_spacing';
+@use '../../styles/_typography';
+
+.manager {
+  @include sizes.width(70);
+  background-color: colors.$block-background;
+}
+
+.header {
+  @include typography.block-title;
+  @include spacing.padding(2, 4);
+  @include spacing.margin(2, 0);
+  background-color: colors.$block-background-light;
+}
+
+.apps {
+  @include spacing.margin(5, 4);
+}

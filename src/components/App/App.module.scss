@@ -1,0 +1,16 @@
+@use '../../styles/_sizes';
+@use '../../styles/_spacing';
+@use '../../styles/_typography';
+
+.app {
+  @include typography.block-contents;
+  @include spacing.margin(4, 0);
+  align-items: center;
+  display: flex;
+}
+
+.app-icon {
+  @include spacing.margin-right(2);
+  @include sizes.square(5);
+  filter: opacity(0.5);
+}

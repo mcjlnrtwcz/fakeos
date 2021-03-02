@@ -3,7 +3,7 @@ import ExampleWindow from './components/ExampleWindow/ExampleWindow';
 
 import './styles/global.scss';
 
-export default function App() {
+export default function OperatingSystem() {
   return (
     <Desktop>
       <ExampleWindow />

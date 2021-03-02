@@ -8,6 +8,10 @@
   margin: sizes.unit($vertical) sizes.unit($horizontal);
 }
 
+@mixin margin-bottom($unit) {
+  margin-bottom: sizes.unit($unit);
+}
+
 @mixin margin-left($unit) {
   margin-left: sizes.unit($unit);
 }
