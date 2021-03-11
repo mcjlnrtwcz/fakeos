@@ -29,3 +29,11 @@
 .apps {
   @include spacing.margin(5, 4);
 }
+
+.app-category {
+  @include typography.block-contents;
+}
+
+.favorites {
+  @include spacing.margin-bottom(8);
+}
