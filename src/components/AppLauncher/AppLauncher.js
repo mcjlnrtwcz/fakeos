@@ -1,38 +1,45 @@
-import calculatorIcon from 'pixelarticons/svg/calculator.svg';
-import helpIcon from 'pixelarticons/svg/book-open.svg';
-import terminalIcon from 'pixelarticons/svg/frame.svg';
-import { useState } from 'preact/hooks';
+import searchIcon from 'pixelarticons/svg/search.svg';
 
-import CollapsedLauncher from './CollapsedLauncher/CollapsedLauncher';
-import DefaultLauncher from './DefaultLauncher/DefaultLauncher';
-import useEvent from '../../hooks/useEvent';
+import App from '../App/App';
 
-// TODO: improve storing icons
-const APPS = {
-  Favorites: [
-    { name: 'Calculator', icon: calculatorIcon },
-    { name: 'Terminal', icon: terminalIcon },
-  ],
-  Utilities: [{ name: 'Calculator', icon: calculatorIcon }],
-  System: [
-    { name: 'Terminal', icon: terminalIcon },
-    { name: 'Help', icon: helpIcon },
-  ],
-};
+import styles from './AppLauncher.module.scss';
 
-export default function AppLauncher() {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+export default function AppLauncher({ apps }) {
+  const [favorites, ...rest] = Object.entries(apps);
 
-  // Collapse launcher by pressing "super" key
-  useEvent(window, 'keydown', ({ key }) => {
-    if (key === 'Meta') {
-      setIsCollapsed((current) => !current);
-    }
-  });
+  return (
+    <>
+      <div class={styles.header}>Applications</div>
+      {/* TODO: focus on search bar after this is un-collapsed  */}
+      <div class={styles.search}>
+        <span>Search</span>
+        <img src={searchIcon} class={styles['search-icon']} />
+      </div>
+      <div class={styles.apps}>
+        <AppGroup name={'Favorites'} customClass={styles.favorites}>
+          {favorites[1].map((app) => (
+            <App icon={app.icon}>{app.name}</App>
+          ))}
+        </AppGroup>
+        {rest.map(([group, groupApps]) => (
+          <AppGroup name={group}>
+            {groupApps.map((app) => (
+              <App icon={app.icon}>{app.name}</App>
+            ))}
+          </AppGroup>
+        ))}
+      </div>
+      {/* TODO: place clock at the bottom? */}
+    </>
+  );
+}
 
-  return isCollapsed ? (
-    <DefaultLauncher apps={APPS} />
-  ) : (
-    <CollapsedLauncher apps={APPS} />
+function AppGroup({ name, customClass, children }) {
+  return (
+    <div class={customClass}>
+      <span class={styles['app-group']}>{name}</span>
+      {/* TODO: groups should be collapsible */}
+      {children}
+    </div>
   );
 }

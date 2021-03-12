@@ -1,13 +1,7 @@
-@use '../../../styles/_colors';
-@use '../../../styles/_sizes';
-@use '../../../styles/_spacing';
-@use '../../../styles/_typography';
-
-.panel {
-  @include sizes.width(70);
-  background-color: colors.$block-background;
-  height: 100%;
-}
+@use '../../styles/_colors';
+@use '../../styles/_sizes';
+@use '../../styles/_spacing';
+@use '../../styles/_typography';
 
 .header {
   @include typography.block-title;
@@ -36,10 +30,10 @@
   @include spacing.margin(5, 4);
 }
 
-.app-category {
-  @include typography.block-contents;
-}
-
 .favorites {
   @include spacing.margin-bottom(8);
+}
+
+.app-group {
+  @include typography.block-contents;
 }

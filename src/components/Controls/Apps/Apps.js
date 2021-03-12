@@ -1,19 +1,20 @@
-import styles from './CollapsedLauncher.module.scss';
+import styles from './Apps.module.scss';
 
-export default function CollapsedLauncher({ apps }) {
+export default function Apps({ apps }) {
+  // TODO: display app "header" icon
   return (
     <div>
       {apps.Favorites.map((app) => (
-        <CollapsedApp app={app} />
+        <App app={app} />
       ))}
     </div>
   );
 }
 
-function CollapsedApp({ app }) {
+function App({ app }) {
   // TODO: tooltip with app name
   return (
-    <div class={styles['collapsed-app']}>
+    <div class={styles['app']}>
       <img src={app.icon} class={styles['app-icon']} title={app.name} />
     </div>
   );

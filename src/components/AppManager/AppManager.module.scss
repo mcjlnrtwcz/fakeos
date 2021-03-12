@@ -11,7 +11,7 @@
 .header {
   @include typography.block-title;
   @include spacing.padding(2, 4);
-  @include spacing.margin(2, 0);
+  @include spacing.margin-bottom(2);
   background-color: colors.$block-background-light;
 }
 
