@@ -1,0 +1,11 @@
+@use '../../../styles/_sizes';
+@use '../../../styles/_colors';
+
+.button {
+  @include sizes.square(8);
+  align-items: center;
+  background-color: colors.$block-background;
+  border: 2px outset colors.$block-border;
+  display: flex;
+  justify-content: center;
+}
